@@ -63,9 +63,9 @@
 <body class="bg-gray-50 min-h-screen">
     <!-- Luxury Header -->
     <header class="dark-luxury shadow-2xl fixed w-full top-0 z-50 border-b-4 border-yellow-400">
-        <div class="container mx-auto px-6 py-6">
-            <!-- Top Bar -->
-            <div class="flex justify-between items-center mb-4 text-sm">
+        <div class="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+            <!-- Top Bar - Hidden on mobile -->
+            <div class="hidden lg:flex justify-between items-center mb-4 text-xs xl:text-sm">
                 <div class="text-yellow-400 font-semibold">
                     📞 اتصل بنا: 123-456-789 | 📧 info@laptopstore.com
                 </div>
@@ -76,63 +76,100 @@
             
             <!-- Main Navigation -->
             <div class="flex justify-between items-center">
-                <div class="text-3xl font-bold text-white text-shadow">
+                <div class="text-lg sm:text-2xl lg:text-3xl font-bold text-white text-shadow">
                     💻 <span class="gold-gradient bg-clip-text text-transparent">متجر اللابتوبات الفاخر</span>
                 </div>
                 
-                <nav>
-                    <ul class="flex space-x-8 space-x-reverse">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl">
+                    ☰
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:block">
+                    <ul class="flex space-x-4 xl:space-x-8 space-x-reverse">
                         <li>
-                            <a href="index.html" class="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-white/10 relative group">
+                            <a href="#home" class="text-white text-sm xl:text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-2 xl:px-4 py-2 rounded-lg hover:bg-white/10 relative group">
                                 🏠 الرئيسية
                                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="shasha.html" target="_blank" class="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-white/10 relative group">
-                                🖥️ قسم الشاشات
+                            <a href="shasha.html" target="_blank" class="text-white text-sm xl:text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-2 xl:px-4 py-2 rounded-lg hover:bg-white/10 relative group">
+                                🖥️ الشاشات
                                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="ex.html" target="_blank" class="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-white/10 relative group">
+                            <a href="ex.html" target="_blank" class="text-white text-sm xl:text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-2 xl:px-4 py-2 rounded-lg hover:bg-white/10 relative group">
                                 🎮 الاكسسوارات
                                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="seana.html" target="_blank" class="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-white/10 relative group">
-                                🔧 قطع الصيانة
+                            <a href="seana.html" target="_blank" class="text-white text-sm xl:text-lg font-semibold hover:text-yellow-400 transition-all duration-300 px-2 xl:px-4 py-2 rounded-lg hover:bg-white/10 relative group">
+                                🔧 الصيانة
                                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html" class="gold-gradient text-black font-bold px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300 pulse-glow">
-                                📞 تواصل معنا
+                            <a href="#contact" class="gold-gradient text-black font-bold px-3 xl:px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300 pulse-glow text-sm xl:text-base">
+                                📞 تواصل
                             </a>
                         </li>
                     </ul>
                 </nav>
             </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobile-menu" class="lg:hidden hidden mt-4 border-t border-gray-600 pt-4">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#home" class="block text-white text-lg font-semibold hover:text-yellow-400 transition-colors duration-300 py-2">
+                            🏠 الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shasha.html" target="_blank" class="block text-white text-lg font-semibold hover:text-yellow-400 transition-colors duration-300 py-2">
+                            🖥️ قسم الشاشات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ex.html" target="_blank" class="block text-white text-lg font-semibold hover:text-yellow-400 transition-colors duration-300 py-2">
+                            🎮 الاكسسوارات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="seana.html" target="_blank" class="block text-white text-lg font-semibold hover:text-yellow-400 transition-colors duration-300 py-2">
+                            🔧 قطع الصيانة
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="block gold-gradient text-black font-bold px-6 py-3 rounded-full text-center mt-4">
+                            📞 تواصل معنا
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-40 pb-20 luxury-gradient relative overflow-hidden">
+    <section id="home" class="pt-32 sm:pt-40 pb-16 sm:pb-20 luxury-gradient relative overflow-hidden">
         <div class="absolute inset-0 bg-black/20"></div>
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
             <div class="text-center">
-                <h1 class="text-7xl font-bold text-white mb-6 text-shadow floating-animation">
+                <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 text-shadow floating-animation">
                     🌟 عالمك يبدأ من هنا 🌟
                 </h1>
-                <p class="text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
                     اكتشف أحدث أجهزة اللابتوب بأفضل الأسعار وأعلى جودة في الشرق الأوسط
                 </p>
-                <div class="flex justify-center space-x-4 space-x-reverse">
-                    <button class="gold-gradient text-black font-bold px-8 py-4 rounded-full text-xl hover:scale-105 transition-transform duration-300 pulse-glow">
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 sm:space-x-reverse px-4">
+                    <button class="gold-gradient text-black font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl hover:scale-105 transition-transform duration-300 pulse-glow w-full sm:w-auto">
                         🛒 تسوق الآن
                     </button>
-                    <button class="border-2 border-white text-white font-bold px-8 py-4 rounded-full text-xl hover:bg-white hover:text-gray-800 transition-all duration-300">
+                    <button class="border-2 border-white text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl hover:bg-white hover:text-gray-800 transition-all duration-300 w-full sm:w-auto">
                         📱 اتصل بنا
                     </button>
                 </div>
@@ -141,56 +178,56 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">✨ لماذا نحن الأفضل؟ ✨</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 card-hover">
-                    <div class="text-6xl mb-4">🚚</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">شحن سريع ومجاني</h3>
-                    <p class="text-gray-600">توصيل مجاني لجميع الطلبات فوق 1000 دولار في جميع أنحاء المنطقة</p>
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12 sm:mb-16">✨ لماذا نحن الأفضل؟ ✨</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div class="text-center p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 card-hover">
+                    <div class="text-4xl sm:text-6xl mb-4">🚚</div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">شحن سريع ومجاني</h3>
+                    <p class="text-sm sm:text-base text-gray-600">توصيل مجاني لجميع الطلبات فوق 1000 دولار في جميع أنحاء المنطقة</p>
                 </div>
-                <div class="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 card-hover">
-                    <div class="text-6xl mb-4">💎</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">ضمان ذهبي</h3>
-                    <p class="text-gray-600">ضمان شامل لمدة سنتين على جميع المنتجات مع خدمة ما بعد البيع</p>
+                <div class="text-center p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 card-hover">
+                    <div class="text-4xl sm:text-6xl mb-4">💎</div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">ضمان ذهبي</h3>
+                    <p class="text-sm sm:text-base text-gray-600">ضمان شامل لمدة سنتين على جميع المنتجات مع خدمة ما بعد البيع</p>
                 </div>
-                <div class="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 card-hover">
-                    <div class="text-6xl mb-4">🏆</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">جودة عالمية</h3>
-                    <p class="text-gray-600">منتجات أصلية 100% من أفضل الماركات العالمية المعتمدة</p>
+                <div class="text-center p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 card-hover">
+                    <div class="text-4xl sm:text-6xl mb-4">🏆</div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">جودة عالمية</h3>
+                    <p class="text-sm sm:text-base text-gray-600">منتجات أصلية 100% من أفضل الماركات العالمية المعتمدة</p>
                 </div>
-                <div class="text-center p-8 rounded-2xl bg-gradient-to-br from-yellow-50 to-yellow-100 card-hover">
-                    <div class="text-6xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">أسعار تنافسية</h3>
-                    <p class="text-gray-600">أفضل الأسعار في السوق مع إمكانية التقسيط بدون فوائد</p>
+                <div class="text-center p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-yellow-50 to-yellow-100 card-hover">
+                    <div class="text-4xl sm:text-6xl mb-4">💰</div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">أسعار تنافسية</h3>
+                    <p class="text-sm sm:text-base text-gray-600">أفضل الأسعار في السوق مع إمكانية التقسيط بدون فوائد</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- MacBook Section -->
-    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">🍎 مجموعة MacBook الفاخرة 🍎</h2>
-                <p class="text-xl text-gray-600">أحدث إصدارات Apple بتقنية M2 المتطورة</p>
+    <section class="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">🍎 مجموعة MacBook الفاخرة 🍎</h2>
+                <p class="text-lg sm:text-xl text-gray-600">أحدث إصدارات Apple بتقنية M2 المتطورة</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- MacBook Pro M2 -->
                 <div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover border-2 border-gray-100">
                     <div class="relative">
-                        <img src="img/mac.jpeg" alt="MacBook Pro M2" class="w-full h-64 object-cover">
-                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        <img src="img/mac.jpeg" alt="MacBook Pro M2" class="w-full h-48 sm:h-64 object-cover">
+                        <div class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-red-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">
                             🔥 الأكثر مبيعاً
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">MacBook Pro M2</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">14‑inch MacBook Pro Apple M2 Pro with 12‑core CPU, 19‑core GPU, 16‑core Neural Engine 16GB</p>
-                        <div class="flex justify-between items-center">
-                            <span class="price-tag text-white px-4 py-2 rounded-full font-bold text-lg">1600$</span>
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">MacBook Pro M2</h3>
+                        <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">14‑inch MacBook Pro Apple M2 Pro with 12‑core CPU, 19‑core GPU, 16‑core Neural Engine 16GB</p>
+                        <div class="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
+                            <span class="price-tag text-white px-3 sm:px-4 py-2 rounded-full font-bold text-base sm:text-lg">1600$</span>
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 rounded-lg transition-colors duration-300 text-sm sm:text-base w-full sm:w-auto text-center">
                                 🛒 اشتري الآن
                             </a>
                         </div>
@@ -453,14 +490,14 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="py-16 dark-luxury">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">📧 اشترك في نشرتنا الإخبارية</h2>
-            <p class="text-white/80 mb-8">احصل على أحدث العروض والمنتجات الجديدة</p>
-            <div class="max-w-md mx-auto flex">
+    <section class="py-12 sm:py-16 dark-luxury">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">📧 اشترك في نشرتنا الإخبارية</h2>
+            <p class="text-white/80 mb-6 sm:mb-8">احصل على أحدث العروض والمنتجات الجديدة</p>
+            <div class="max-w-md mx-auto flex flex-col sm:flex-row space-y-3 sm:space-y-0">
                 <input type="email" placeholder="أدخل بريدك الإلكتروني" 
-                       class="flex-1 px-6 py-3 rounded-r-full border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                <button class="gold-gradient text-black font-bold px-8 py-3 rounded-l-full hover:scale-105 transition-transform duration-300">
+                       class="flex-1 px-4 sm:px-6 py-3 rounded-full sm:rounded-r-full sm:rounded-l-none border-0 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-center sm:text-right">
+                <button class="gold-gradient text-black font-bold px-6 sm:px-8 py-3 rounded-full sm:rounded-l-full sm:rounded-r-none hover:scale-105 transition-transform duration-300">
                     اشترك
                 </button>
             </div>
@@ -468,29 +505,29 @@
     </section>
 
     <!-- Luxury Footer -->
-    <footer class="dark-luxury py-16 border-t-4 border-yellow-400">
-        <div class="container mx-auto px-6">
+    <footer class="dark-luxury py-12 sm:py-16 border-t-4 border-yellow-400">
+        <div class="container mx-auto px-4 sm:px-6">
             <!-- Main Footer Content -->
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 sm:mb-12">
                 <!-- Company Info -->
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-6">
+                <div class="text-center sm:text-right">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
                         💻 <span class="gold-gradient bg-clip-text text-transparent">متجر اللابتوبات الفاخر</span>
                     </h3>
-                    <p class="text-gray-300 mb-4 leading-relaxed">
+                    <p class="text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
                         وجهتك الأولى لأحدث أجهزة اللابتوب بأفضل الأسعار وأعلى جودة في المنطقة.
                     </p>
-                    <div class="flex space-x-4 space-x-reverse">
-                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                    <div class="flex justify-center sm:justify-start space-x-4 space-x-reverse">
+                        <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 text-sm sm:text-base">
                             📘
                         </a>
-                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-blue-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 text-sm sm:text-base">
                             🐦
                         </a>
-                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 text-sm sm:text-base">
                             📷
                         </a>
-                        <a href="#" class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-green-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 text-sm sm:text-base">
                             📱
                         </a>
                     </div>
@@ -571,18 +608,18 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <div class="fixed bottom-6 left-6 z-50">
+    <div class="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-50">
         <a href="https://wa.me/966123456789" target="_blank" 
-           class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 pulse-glow">
-            <span class="text-2xl">📱</span>
+           class="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 pulse-glow">
+            <span class="text-xl sm:text-2xl">📱</span>
         </a>
     </div>
 
     <!-- Back to Top Button -->
-    <div class="fixed bottom-6 right-6 z-50">
+    <div class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">
         <button onclick="scrollToTop()" 
-                class="gold-gradient text-black p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 pulse-glow">
-            <span class="text-2xl">⬆️</span>
+                class="gold-gradient text-black p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 pulse-glow">
+            <span class="text-xl sm:text-2xl">⬆️</span>
         </button>
     </div>
 
@@ -631,6 +668,23 @@
             }
         });
 
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            this.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
         // Newsletter subscription
         document.querySelector('button[type="button"]').addEventListener('click', function() {
             const email = document.querySelector('input[type="email"]').value;
@@ -658,5 +712,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96e1d0c3623e5daf',t:'MTc1NTAyMTAzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f4904113c3997d',t:'MTc1NTIxNzYxOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
